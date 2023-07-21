@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora SRI</title>
+</head>
+<body>
+    <ul style="list-style: none;">
+        <li *ngFor="let deducible of deducibles" ngFor="let imagen of imagenes">
+            <div class="card" style="width: 18rem;">
+                <img src={{deducible.img}} class="card-img-top" alt="Imagenes">
+            <div class="card-body">
+                <h5 class="card-title">{{deducible.name}}</h5>
+                <p class="card-text">Descripcion deducible!! <b>{{deducible.name}}</b></p>
+            </div>
+                <button (click)="informacion()" class="btn btn-info">Informacion</button>
+                <button (click)="borrarDeducible(deducible)" class="btn btn-warning">Borrar</button>
+            </div>
+        </li>
+    </ul>
+</body>
+</html>
